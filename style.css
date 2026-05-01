@@ -1,0 +1,90 @@
+:root {
+    --primary-color: #2563eb;
+    --text-color: #1f2937;
+    --bg-color: #f9fafb;
+    --border-color: #d1d5db;
+    --success-color: #059669;
+    --focus-ring: #60a5fa;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.form-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 { margin-bottom: 0.5rem; font-size: 1.5rem; }
+
+/* Progress Bar */
+.progress-wrapper { margin-bottom: 1.5rem; }
+.progress-text { font-size: 0.875rem; margin-bottom: 0.5rem; font-weight: 600; }
+.progress-bar { background: #e5e7eb; height: 8px; border-radius: 4px; overflow: hidden; }
+.progress-fill { background: var(--primary-color); height: 100%; transition: width 0.3s ease; }
+
+/* Form Elements */
+.form-group { margin-bottom: 1.25rem; }
+label { display: block; font-size: 0.875rem; font-weight: 500; margin-bottom: 0.5rem; }
+
+input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+/* Accessibility: Clear Focus State */
+input:focus {
+    outline: 3px solid var(--focus-ring);
+    border-color: var(--primary-color);
+}
+
+.input-wrapper { position: relative; }
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Checklist */
+.requirements { border: none; padding: 0; margin: 1.5rem 0; }
+.requirements legend { font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; }
+.requirements ul { list-style: none; padding: 0; font-size: 0.875rem; }
+.requirements li::before { content: "○ "; margin-right: 8px; }
+.requirements li.complete { color: var(--success-color); }
+.requirements li.complete::before { content: "● "; }
+
+.submit-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.submit-btn:hover { background: #1d4ed8; }
