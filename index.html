@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Signup Form UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="form-container">
+        <h1>Create an Account</h1>
+        <p>Join our community by filling out the details below.</p>
+
+        <!-- Progress Bar Section -->
+        <div class="progress-wrapper" aria-hidden="true">
+            <div class="progress-text">Form Completeness: <span>25%</span></div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 25%;"></div>
+            </div>
+        </div>
+
+        <form>
+            <!-- Full Name -->
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full-name" required aria-required="true" placeholder="e.g. Jane Doe">
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required aria-required="true" placeholder="jane@example.com">
+            </div>
+
+            <!-- Password with Toggle -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="input-wrapper">
+                    <input type="password" id="password" name="password" required aria-required="true">
+                    <button type="button" class="toggle-password" aria-label="Show password">
+                        Show
+                    </button>
+                </div>
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required aria-required="true">
+            </div>
+
+            <!-- Requirements Checklist -->
+            <fieldset class="requirements">
+                <legend>Password Requirements</legend>
+                <ul>
+                    <li class="complete" aria-label="Requirement met">At least 8 characters</li>
+                    <li class="incomplete" aria-label="Requirement not met">One uppercase letter</li>
+                    <li class="incomplete" aria-label="Requirement not met">One special character</li>
+                </ul>
+            </fieldset>
+
+            <button type="submit" class="submit-btn">Register</button>
+        </form>
+    </main>
+
+</body>
+</html>
